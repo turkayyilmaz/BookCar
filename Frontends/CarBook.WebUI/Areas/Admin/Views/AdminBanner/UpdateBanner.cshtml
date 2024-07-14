@@ -1,0 +1,35 @@
+﻿@model UpdateBannerDto
+@{
+    ViewData["Title"] = "CreateBrand";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Update Banner</h4>
+                <p class="card-subtitle mb-4">Insert a Banner information.</p>
+                <form method="post">
+                    <input type="hidden" asp-for="BannerId" />
+                    <div class="form-group">
+                        <label for="exampleInputBrand">Banner Title</label>
+                        <input type="text" class="form-control" asp-for="Title" id="exampleInputBrand" placeholder="Insert a Banner...">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputBrand">Banner Description</label>
+                        <input type="text" class="form-control" asp-for="Description" id="exampleInputBrand" placeholder="Insert a Banner Description...">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputBrand">Video Description</label>
+                        <input type="text" class="form-control" asp-for="VideoDescription" id="exampleInputBrand" placeholder="Insert a Video Description...">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputBrand">Video Url</label>
+                        <input type="text" class="form-control" asp-for="VideoUrl" id="exampleInputBrand" placeholder="Insert a Video Url...">
+                    </div>
+                    <button type="submit" class="btn btn-primary waves-effect waves-light">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

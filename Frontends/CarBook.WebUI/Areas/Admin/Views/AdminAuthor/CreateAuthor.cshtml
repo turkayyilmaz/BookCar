@@ -1,0 +1,32 @@
+﻿@model CreateAuthorDto
+@{
+	ViewData["Title"] = "CreateBrand";
+	Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="row">
+	<div class="col-xl-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title">Car Author Information</h4>
+				<p class="card-subtitle mb-4">
+					Insert some informations about author.
+				</p>
+				<form method="post">
+					<div class="form-group">
+						<label for="exampleInputBrand">Author Full Name</label>
+						<input type="text" class="form-control" asp-for="Name" id="exampleInputBrand" placeholder="Insert a Author...">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputBrand">Author Description</label>
+						<input type="text" class="form-control" asp-for="Description" id="exampleInputBrand" placeholder="Insert a Description...">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputBrand">Image</label>
+						<input type="text" class="form-control" asp-for="ImageUrl" id="exampleInputBrand" placeholder="Insert a Image...">
+					</div>
+					<button type="submit" class="btn btn-primary waves-effect waves-light">Save</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

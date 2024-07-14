@@ -1,0 +1,17 @@
+﻿@model GetBlogById
+<div class="col-md-8 ftco-animate">
+	@*Partial view içinde partial view yazıyoruz*@
+	<h2 class="mb-3">
+		@Model.Title</p>
+		<h5>@Model.Description</h5>
+		@await Component.InvokeAsync("_BlogDetailCloudTagByBlogComponentPartial", new { id = ViewBag.blogId })
+		@await Component.InvokeAsync("_BlogDetailsAuthorAboutComponentPartial", new { id = ViewBag.blogId })
+
+		<div class="pt-5 mt-5">
+			<h3 class="mb-3">@ViewBag.commentCount Yorum</h3>
+			@await Component.InvokeAsync("_CommentListByBlogComponentPartial", new { id = ViewBag.blogId })
+			@* @await Component.InvokeAsync("_AddCommentComponentPartial") *@
+			@await Html.PartialAsync("~/Views/Blog/AddComment.cshtml", new { id = ViewBag.blogid })
+		</div>
+
+</div>

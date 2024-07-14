@@ -1,0 +1,57 @@
+﻿@model List<ResultAllBlogsWithAuthorDto>
+@{
+    ViewData["Title"] = "AdminCar";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Blog List and Performs</h4>
+                        <p class="card-subtitle mb-4">
+                            You can see deletions, updates and blog list access for blogs. Adding a new blog is not done by the admin. If you want to add a blog, you must log in to the system as an author. Each author can only edit their own blogs. To do this, you can log in via the Login/WriterLogin page in the application.
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Title</th>
+                                        <th>Author</th>
+                                        <th>Category</th>
+                                        <th>Date</th>
+                                        <th>Delete</th>
+                                        <th>Go Blog</th>
+                                        <th>Comments</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        count++;
+                                        <tr>
+                                            <td>@count</td>
+                                            <td>@item.title</td>
+                                            <td>@item.authorName</td>
+                                            <td>@item.categoryId</td>
+                                            <td>@item.createdDate</td>
+                                            <td><a href="/Admin/AdminBlog/RemoveBlog/@item.blogId" class="btn btn-outline-danger">Sil</a></td>
+                                            <td><a href="/Blog/BlogDetail/@item.blogId" class="btn btn-outline-dark">Blogu Aç</a></td>
+                                            <td><a href="/Admin/AdminComment/Index/@item.blogId" class="btn btn-outline-warning">Yorumlar</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

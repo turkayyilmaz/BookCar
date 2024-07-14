@@ -1,0 +1,62 @@
+﻿@model List<ResultAuthorDto>
+@{
+	ViewData["Title"] = "AdminCar";
+	Layout = "~/Views/AdminLayout/Index.cshtml";
+	int count = 0;
+}
+
+<div class="page-content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="card">
+					<div class="card-body">
+						<h4 class="card-title">Author List</h4>
+						<p class="card-subtitle mb-4">
+							You can carry out transactions regarding authors here. Please enter the information completely.
+						</p>
+
+						<div class="table-responsive">
+							<table class="table mb-0">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Full Name</th>
+										<th>Delete</th>
+										<th>Update</th>
+										<th>Blogs of Author</th>
+									</tr>
+								</thead>
+								<tbody>
+
+									@foreach (var item in Model)
+									{
+										count++;
+										<tr>
+											<td>@count</td>
+											<td><img src="@item.ImageUrl" width="50px" height="50px" style="margin-right:10px" />@item.Name</td>
+											<td><a asp-area="Admin" asp-controller="AdminAuthor" asp-action="RemoveAuthor" asp-route-id="@item.AuthorID" class="btn btn-outline-danger">Delete</a></td>
+											<td><a href="/Admin/AdminAuthor/UpdateAuthor/@item.AuthorID" class="btn btn-outline-primary">Update</a></td>
+											<td><a href="/Admin/AdminAuthor/#/@item.AuthorID" class="btn btn-outline-primary">Yazarın Blogları</a></td>
+										</tr>
+									}
+
+								</tbody>
+							</table>
+							<a href="/Admin/AdminAuthor/CreateAuthor" class="btn btn-outline-success">Create a New Author</a>
+
+						</div>
+
+					</div>
+					<!-- end card-body-->
+				</div>
+				<!-- end card -->
+
+			</div>
+			<!-- end col -->
+			<!-- end col -->
+		</div>
+
+	</div> <!-- container-fluid -->
+</div>
+

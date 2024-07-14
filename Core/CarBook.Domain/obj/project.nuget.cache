@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Z0l778lBxXelSCWfoT1NPodg21eIB8m8hCGDpv/wqY8q+rcMLn3tooF01k+9kYeBmyyxvzwik90sCa8+aTGnTA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ASUS\\Desktop\\N Katmanlı Mimari\\CarBook\\Core\\CarBook.Domain\\CarBook.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

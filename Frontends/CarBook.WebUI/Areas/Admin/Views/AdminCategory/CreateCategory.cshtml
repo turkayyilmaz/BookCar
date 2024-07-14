@@ -1,0 +1,24 @@
+﻿@model CreateCategoryDto
+@{
+	ViewData["Title"] = "CreateBrand";
+	Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="row">
+	<div class="col-xl-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title">Car Category Information</h4>
+				<p class="card-subtitle mb-4">
+					Insert some informations about Category.
+				</p>
+				<form method="post">
+					<div class="form-group">
+						<label for="exampleInputBrand">Category Name</label>
+						<input type="text" class="form-control" asp-for="Name" id="exampleInputBrand" placeholder="Insert a Category...">
+					</div>
+					<button type="submit" class="btn btn-primary waves-effect waves-light">Save</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
